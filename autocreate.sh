@@ -54,11 +54,11 @@ else
     git init
     sleep 2
     echo -ne "\n"
-    curl -u YourUSERNAME:YourTOKEN https://api.github.com/user/repos -d '{"name":"'\'$name_proj'", "private":true}'
-    echo -e "${jaune}The repo named ${name_proj} has been successfully created on Github\n"
+    curl -u YourUSERNAME:YourTOKEN https://api.github.com/user/repos -d '{"name":"'"$name_proj"'", "private":true}'
+    echo -e "${vertclair}The repo named ${name_proj} has been successfully created on Github\n"
     sleep 2
     echo -e "${jaune}Directory linked to your repo\n"
-    git remote add origin https://github.com/YourUSERNAME/-$name_proj.git
+    git remote add origin https://github.com/YourUSERNAME/$name_proj.git
     sleep 2
     touch initial
     echo -e "${jaune}Creation of the initial file to push\n"
